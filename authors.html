@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Information - A framework for Multimodal Biospecimen management in Oncologic Inpatient Cohorts for Multi-Omics based Biobank</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>A framework for Multimodal Biospecimen management in Oncologic Inpatient Cohorts for Multi-Omics based Biobank</h1>
+            <p><em>A framework for Multimodal Biospecimen management in Oncologic Inpatient Cohorts for Multi-Omics based Biobank</em></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="omics.html"><i class="fas fa-dna"></i> Multi-Omics Requirements</a></li>
+                <li><a href="sample_management.html"><i class="fas fa-vials"></i> Sample Management</a></li>
+                <li><a href="ethics.html"><i class="fas fa-file-contract"></i> Ethics and Security</a></li>
+                <li><a href="workflow.html"><i class="fas fa-project-diagram"></i> Biobank Workflow</a></li>
+                <li><a href="introduction.html"><i class="fas fa-book-open"></i> Introduction</a></li>
+                <li><a href="discussion.html"><i class="fas fa-comments"></i> Discussion and Prospects</a></li>
+                <li><a href="authors.html" class="active"><i class="fas fa-users"></i> Author Information</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h2><i class="fas fa-users"></i> Author Information</h2>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> Author Information
+            </div>
+        </div>
+
+        <section id="authors" class="card content-section">
+            <div class="author-list">
+                <div class="author-grid">
+                    <p class="author-names">Zhao Sun<sup>1#</sup>, Xuejiao Xia<sup>1#</sup>, Rui Deng<sup>1</sup>, Jiahui Li<sup>1</sup>, Guanghui Li<sup>1</sup>, Mingliang Yuan<sup>1</sup>, Sanfei Peng<sup>1</sup>, Xiang-yang Yin<sup>1</sup>, Zhiwei Zhao<sup>1</sup>, Xinhua Dong<sup>1</sup>, Qi Liu<sup>1</sup>, Zhen Yang<sup>1*</sup>, Yang Fu<sup>1*</sup></p>
+                    
+                    <div class="affiliation">
+                        <p><sup>1</sup>Department of Gastrointestinal Surgery, the First Affiliated Hospital of Zhengzhou University, Zhengzhou, 450052, China</p>
+                        <p><sup>#</sup>These authors contributed equally to this work</p>
+                    </div>
+                </div>
+
+                <div class="corresponding-author">
+                    <h3><i class="fas fa-envelope"></i> Corresponding Authors</h3>
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-name">Yang Fu</div>
+                            <div class="contact-email"><i class="fas fa-envelope-open-text"></i> fuyang@zzu.edu.cn</div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-name">Zhen Yang</div>
+                            <div class="contact-email"><i class="fas fa-envelope-open-text"></i> 13526685689@163.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="author-details content-section">
+            <h3><i class="fas fa-graduation-cap"></i> Research Team</h3>
+            <p>This research was primarily conducted by the Gastrointestinal Surgery team at the First Affiliated Hospital of Zhengzhou University. The team possesses extensive clinical experience and research background, focusing on oncology and multi-omics research, dedicated to promoting the standardization of biobanks and the development of precision medicine.</p>
+            
+            <h3><i class="fas fa-microscope"></i> Research Institution</h3>
+            <div class="institution-info">
+                <p>The First Affiliated Hospital of Zhengzhou University is a major medical teaching and research institution in China, equipped with advanced multi-omics research platforms and comprehensive biobank infrastructure. The hospital is committed to translational medicine research, facilitating the translation of basic research findings into clinical applications.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 A framework for Multimodal Biospecimen management in Oncologic Inpatient Cohorts for Multi-Omics based Biobank | <i class="fas fa-envelope"></i> Contact us: fuyang@zzu.edu.cn</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate elements when they come into view
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

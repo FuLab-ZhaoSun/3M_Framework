@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Framework for Multi-Omics Based Biobank</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>A framework for Multimodal Biospecimen management in Oncologic Inpatient Cohorts for Multi-Omics based Biobank</h1>
+            <p><em>Zhao Sun<sup>1#</sup>, Xuejiao Xia<sup>1#</sup>, Rui Deng<sup>1</sup>, Jiahui Li<sup>1</sup>, Guanghui Li<sup>1</sup>, Mingliang Yuan<sup>1</sup>, Sanfei Peng<sup>1</sup>, Xiang-yang Yin<sup>1</sup>, Zhiwei Zhao<sup>1</sup>, Xinhua Dong<sup>1</sup>, Qi Liu<sup>1</sup>, Zhen Yang<sup>1*</sup>, Yang Fu<sup>1*</sup></em></p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro-panel">
+            <div class="intro-text">
+                <h2><i class="fas fa-flask"></i> Welcome to the Biobank Management Framework</h2>
+                <p>This framework aims to provide a standardized multimodal biospecimen management system, supporting multi-omics research and precision medicine. Please select a section below to view detailed content.</p>
+            </div>
+        </section>
+
+        <section class="panel-grid">
+            <a href="omics.html" class="panel-card">
+                <div class="panel-icon">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <div class="panel-info">
+                    <h3>Omics Requirements</h3>
+                    <p>Requirements and standards for biospecimens across different omics technologies.</p>
+                </div>
+            </a>
+
+            <a href="sample_management.html" class="panel-card">
+                <div class="panel-icon">
+                    <i class="fas fa-vials"></i>
+                </div>
+                <div class="panel-info">
+                    <h3>Sample Management</h3>
+                    <p>Standard procedures for biospecimen collection, processing, and storage.</p>
+                </div>
+            </a>
+
+            <a href="ethics.html" class="panel-card">
+                <div class="panel-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <div class="panel-info">
+                    <h3>Ethics & Security</h3>
+                    <p>Ethical compliance and data security management for biobanks.</p>
+                </div>
+            </a>
+
+            <a href="workflow.html" class="panel-card">
+                <div class="panel-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="panel-info">
+                    <h3>Biobank Workflow</h3>
+                    <p>Complete biobank workflow and best practices.</p>
+                </div>
+            </a>
+
+            <a href="introduction.html" class="panel-card">
+                <div class="panel-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div class="panel-info">
+                    <h3>Introduction</h3>
+                    <p>Background, objectives, and key scientific concepts of the project.</p>
+                </div>
+            </a>
+
+            <a href="discussion.html" class="panel-card">
+                <div class="panel-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="panel-info">
+                    <h3>Discussion & Outlook</h3>
+                    <p>Project conclusions, outlook, and future directions.</p>
+                </div>
+            </a>
+
+            <a href="authors.html" class="panel-card">
+                <div class="panel-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="panel-info">
+                    <h3>Author Information</h3>
+                    <p>Project contributors and contact details.</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 A framework for Multi-Omics based Biobank | <i class="fas fa-envelope"></i> Contact Us: fuyang@zzu.edu.cn</p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add staggered animation to panel cards
+            const cards = document.querySelectorAll('.panel-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${0.1 * index}s`;
+            });
+        });
+    </script>
+</body>
+</html> 

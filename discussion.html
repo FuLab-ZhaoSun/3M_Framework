@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion and Prospects - A framework for Multimodal Biospecimen management in Oncologic Inpatient Cohorts for Multi-Omics based Biobank</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>A framework for Multimodal Biospecimen management in Oncologic Inpatient Cohorts for Multi-Omics based Biobank</h1>
+            <p><em>A framework for Multimodal Biospecimen management in Oncologic Inpatient Cohorts for Multi-Omics based Biobank</em></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="omics.html"><i class="fas fa-dna"></i> Multi-Omics Requirements</a></li>
+                <li><a href="sample_management.html"><i class="fas fa-vials"></i> Sample Management</a></li>
+                <li><a href="ethics.html"><i class="fas fa-file-contract"></i> Ethics and Security</a></li>
+                <li><a href="workflow.html"><i class="fas fa-project-diagram"></i> Biobank Workflow</a></li>
+                <li><a href="introduction.html"><i class="fas fa-book-open"></i> Introduction</a></li>
+                <li><a href="discussion.html" class="active"><i class="fas fa-comments"></i> Discussion and Prospects</a></li>
+                <li><a href="authors.html"><i class="fas fa-users"></i> Author Information</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h2><i class="fas fa-comments"></i> Discussion and Prospects</h2>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> Discussion and Prospects
+            </div>
+        </div>
+
+        <section id="discussion" class="card content-section">
+            <div class="sub-section">
+                <h3><i class="fas fa-comment-dots"></i> Discussion</h3>
+                <p>Driven by significant advancements in multi-omics technologies, disease research has shifted from traditional clinical observation and empirical medicine to in-depth analysis at the genomic, molecular, and genetic levels. In this context, biobanks, as critical bridges between basic research and clinical application, have gained increasing strategic importance. However, the rapid development of omics technologies has led to an exponential growth in multidimensional data, posing significant challenges to traditional biobanks in terms of storage, management, and data integration. To achieve efficient sample sharing and in-depth analysis of omics data, traditional biobanks need to undergo digital transformation [109, 110]. The main contribution of this study lies in comprehensively and systematically elucidating the diverse requirements of multi-omics technologies within biobanks, thereby providing a theoretical basis for personalized services. It also thoroughly analyzes the entire sample collection process from patient admission to discharge and designs scientific post-collection processing methods based on sample characteristics and research needs, ensuring high sample quality. These efforts lay a solid foundation for the scientific management and effective utilization of biobanks.</p>
+                <p>The effectiveness of a biobank largely depends on the systematic integration of clinical pathways with the sample collection process. This requires pre-planning key nodes for sample collection and establishing a quality control system covering the entire process through close collaboration of multidisciplinary teams (as shown in Figure 1).</p>
+                <div class="figure-placeholder">
+                    <p><strong>[Figure 1: Biobank-Clinical Integration Flowchart]</strong></p>
+                </div>
+                <p>In this process, each key node contains quality control points that require special attention. For example, surgically removed tissues need to be aliquoted and pre-processed within 30 minutes of excision [50, 51]. Heat-sensitive samples (such as RNA) need immediate fixation with RNAlater to maintain transcriptome integrity. Blood samples need centrifugation and aliquoting within 2 hours of collection, and the choice of collection tubes should depend on downstream omics requirements [61-66]. Transport of frozen samples requires sufficient dry ice to maintain a -80°C environment to avoid damage from temperature fluctuations; thus, the amount of ice should be arranged according to needs. To ensure sample quality, biospecimens must undergo quality control procedures before being stored in the biobank to ensure the accuracy of subsequent experiments. It is important to note that all sample collection and personal information acquisition should be conducted after the patient signs an informed consent form. Clinical data and biological sample information should be separated using de-identification techniques to ensure compliance with privacy protection regulations [99, 105, 106]. Additionally, dynamic digital platforms (e.g., electronic medical records connected to the biobank system) allow real-time tracking of specimen status and reduce human errors. This process integration not only improves specimen collection efficiency but also ensures data comparability through standardized operations.</p>
+            </div>
+
+            <div class="sub-section">
+                <h3><i class="fas fa-lightbulb"></i> Prospects</h3>
+                <p>By constructing a multi-omics quality control framework, optimizing specimen collection processes, and improving ethical management, this study significantly enhances the resource utilization and data reliability of biobanks. However, future improvements are still needed in the following directions: 1. Promote the application of laboratory-level automation tools based on existing QC standards [115, 116]; 2. Establish inter-institutional data sharing protocols to facilitate deep integration of multi-organ omics data; 3. Adopt a combined application of dynamic consent models and blockchain technology to further enhance ethical compliance [117]. Through continuous technological innovation and interdisciplinary collaboration, biobanks are poised to become core engines for precision medicine and translational research.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 A framework for Multimodal Biospecimen management... | <i class="fas fa-envelope"></i> Contact us: fuyang@zzu.edu.cn</p>
+    </footer>
+
+    <script>
+        // Animate elements when they come into view (optional, keep if desired)
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section, .sub-section'); // Include sub-sections in animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

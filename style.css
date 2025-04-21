@@ -1,0 +1,771 @@
+/* Modern Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3a6ea5;
+    --primary-dark: #2a4d6e;
+    --secondary-color: #6ac8e7;
+    --accent-color: #44a08d;
+    --text-color: #2c3e50;
+    --text-light: #546e7a;
+    --background-light: #f8f9fa;
+    --background-white: #ffffff;
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-light);
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 2.5rem 0 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: rgba(255,255,255,0.1);
+    transform: rotate(30deg);
+    pointer-events: none;
+}
+
+.header-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    padding: 0 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease-out;
+}
+
+header p em {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 5;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav ul li {
+    margin: 0.5rem 0.8rem;
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+/* Staggered animation for nav items */
+nav ul li:nth-child(1) { animation-delay: 0.1s; }
+nav ul li:nth-child(2) { animation-delay: 0.2s; }
+nav ul li:nth-child(3) { animation-delay: 0.3s; }
+nav ul li:nth-child(4) { animation-delay: 0.4s; }
+nav ul li:nth-child(5) { animation-delay: 0.5s; }
+nav ul li:nth-child(6) { animation-delay: 0.6s; }
+nav ul li:nth-child(7) { animation-delay: 0.7s; }
+nav ul li:nth-child(8) { animation-delay: 0.8s; }
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: var(--transition);
+    display: block;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+nav ul li a i {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li a.active {
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    background-color: var(--background-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    padding: 2.5rem;
+    position: relative;
+}
+
+/* Page Header and Breadcrumb */
+.page-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.page-header h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.page-header h2 i {
+    margin-right: 0.7rem;
+    color: var(--secondary-color);
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.breadcrumb i {
+    font-size: 0.7rem;
+    margin: 0 0.5rem;
+    color: var(--text-light);
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.content-section:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.content-section:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.content-section:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.content-section h3 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.content-section h3 i {
+    margin-right: 0.7rem;
+    color: var(--secondary-color);
+}
+
+/* Authors Page Styling */
+.author-grid {
+    margin-bottom: 2rem;
+}
+
+.author-names {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.affiliation {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--secondary-color);
+}
+
+.corresponding-author {
+    margin-top: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-card {
+    background-color: white;
+    box-shadow: var(--shadow-light);
+    padding: 1.2rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    flex: 1;
+    min-width: 250px;
+    border-top: 3px solid var(--primary-color);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.contact-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.contact-email {
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+}
+
+.contact-email i {
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.author-details h3 {
+    margin-top: 2rem;
+}
+
+.institution-info {
+    background-color: rgba(106, 200, 231, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--accent-color);
+}
+
+/* Introduction Page Styling */
+.project-goals {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding-left: 0.5rem;
+}
+
+.project-goals li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.project-goals li i {
+    color: var(--accent-color);
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+}
+
+.reference-section {
+    margin-top: 3rem;
+}
+
+.references {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.references li {
+    margin-bottom: 0.8rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Panel Grid Layout for Homepage */
+.intro-panel {
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.intro-panel h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.intro-panel p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.panel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 2rem;
+}
+
+.panel-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    border-top: 5px solid var(--primary-color);
+}
+
+.panel-card:nth-child(2n) {
+    border-top-color: var(--secondary-color);
+}
+
+.panel-card:nth-child(3n) {
+    border-top-color: var(--accent-color);
+}
+
+.panel-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.panel-icon {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    font-size: 2.5rem;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.panel-card:nth-child(2n) .panel-icon {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.panel-card:nth-child(3n) .panel-icon {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+}
+
+.panel-icon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.1);
+    transform: rotate(30deg);
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.panel-card:hover .panel-icon::before {
+    transform: rotate(35deg) translateY(-10%);
+}
+
+.panel-card:hover .panel-icon i {
+    transform: scale(1.1);
+}
+
+.panel-icon i {
+    transition: var(--transition);
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.panel-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    background-color: white;
+}
+
+.panel-info h3 {
+    color: var(--primary-dark);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    transition: var(--transition);
+}
+
+.panel-card:hover .panel-info h3 {
+    color: var(--primary-color);
+}
+
+.panel-info p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.card {
+    margin-bottom: 3rem;
+    position: relative;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    background-color: var(--background-white);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section:hover {
+    box-shadow: var(--shadow-light);
+    transform: translateY(-3px);
+}
+
+section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+section h2 i {
+    margin-right: 0.7rem;
+    color: var(--secondary-color);
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+section:hover h2::after {
+    width: 100px;
+}
+
+section h3 {
+    color: var(--primary-dark);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+section p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+section strong {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+section#authors {
+    background-color: rgba(106, 200, 231, 0.1);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.author-list p {
+    margin-bottom: 0.8rem;
+}
+
+p.corresponding-author {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+section#abstract {
+    background-color: rgba(68, 160, 141, 0.1);
+    border-left: 4px solid var(--accent-color);
+}
+
+.abstract-content p:last-child {
+    margin-bottom: 0;
+}
+
+section#introduction {
+    border-left: 4px solid var(--primary-color);
+}
+
+section#introduction p {
+    text-align: justify;
+}
+
+.intro-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.25rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        padding: 0.75rem 1rem;
+        width: 100%;
+    }
+    
+    .panel-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .panel-card {
+        max-width: 100%;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+    }
+    
+    .contact-card {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .author-grid {
+        display: block;
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    position: relative;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+footer i {
+    margin: 0 0.4rem;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(106, 200, 231, 0.05);
+}
+
+table tr:hover {
+    background-color: rgba(58, 110, 165, 0.05);
+}
+
+/* Download links styling */
+.download-links ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.download-links li {
+    margin-bottom: 10px;
+    background-color: var(--background-light);
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.download-links li:hover {
+    background-color: rgba(106, 200, 231, 0.2);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-light);
+}
+
+.download-links li i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.download-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.download-links a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+} 

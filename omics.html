@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omics Requirements - A Framework for Multi-Omics Based Biobank</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>A framework for Multimodal Biospecimen management in Oncologic Inpatient Cohorts for Multi-Omics based Biobank</h1>
+            <p><em>Zhao Sun<sup>1#</sup>, Xuejiao Xia<sup>1#</sup>, Rui Deng<sup>1</sup>, Jiahui Li<sup>1</sup>, Guanghui Li<sup>1</sup>, Mingliang Yuan<sup>1</sup>, Sanfei Peng<sup>1</sup>, Xiang-yang Yin<sup>1</sup>, Zhiwei Zhao<sup>1</sup>, Xinhua Dong<sup>1</sup>, Qi Liu<sup>1</sup>, Zhen Yang<sup>1*</sup>, Yang Fu<sup>1*</sup></em></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="omics.html" class="active"><i class="fas fa-dna"></i> Omics Requirements</a></li>
+                <li><a href="sample_management.html"><i class="fas fa-vials"></i> Sample Management</a></li>
+                <li><a href="ethics.html"><i class="fas fa-file-contract"></i> Ethics & Security</a></li>
+                <li><a href="workflow.html"><i class="fas fa-project-diagram"></i> Biobank Workflow</a></li>
+                <li><a href="introduction.html"><i class="fas fa-book-open"></i> Introduction</a></li>
+                <li><a href="discussion.html"><i class="fas fa-comments"></i> Discussion & Outlook</a></li>
+                <li><a href="authors.html"><i class="fas fa-users"></i> Author Information</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h2><i class="fas fa-dna"></i> Omics Requirements</h2>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> Omics Requirements
+            </div>
+        </div>
+
+        <section id="omics-requirements" class="card content-section">
+            <h3><i class="fas fa-cubes"></i> Requirements for Biobank Samples in Multi-Omics Technologies</h3>
+            <p>In this section, we systemically concluded the bio-samples requirements of major omics types, including genomics, transcriptomics, proteomics, metabolomics and epigenomics.</p>
+
+            <div class="sub-section">
+                <h4><i class="fas fa-dna"></i> Genomics</h4>
+                <p>Genomics takes the whole genome sequence and DNA variations (single nucleotide variations, insertion deletions, structural variations, etc.) as the object of study, analyses the genome structure, function and evolution, and its carrier genome consists of exons encoding proteins (accounting for 1%) and introns regulating gene expression.[13] .Whole - Genome Sequencing (WGS) involves DNA extraction, library preparation (fragmentation, end - repair, adapter ligation), paired - end 150bp sequencing (e.g., via Illumina platforms), and bioinformatics analysis (FastQC, BWA, GATK) [14, 15]. Its paired - end strategy improves detection of repeats and SVs.Whole - Exome Sequencing (WES), which uses probes to capture exons (1% of the genome but holds 85% of disease - causing mutations), is cost - effective and less data - intensive. Its process resembles WGS, but with exon capture and enrichment in library preparation.[16].For microbial studies, amplicon sequencing amplifies marker genes (16S/18S/ITS) with universal primers for community composition analysis at the genus level and above. Metagenomic sequencing directly assesses all microbial DNA in environmental samples, revealing genetic and metabolic details down to the strain level. Both involve end - repair and adapter ligation in DNA processing[17, 18].</p>
+                <div class="table-header">
+                    <h5>Table 1: Genomics sample size requirements</h5>
+                    <button class="download-btn" onclick="downloadTableAsCSV('genomics-table', 'table1_genomics_samples.csv')"><i class="fas fa-download"></i> Download CSV</button>
+                </div>
+                <div class="table-container">
+                    <table id="genomics-table">
+                        <thead>
+                            <tr>
+                                <th>Sample type</th>
+                                <th>WGS/WES Sample volume</th>
+                                <th>Amplicon sequencing Sample volume</th>
+                                <th>Macrogenome sequencing Sample volume</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Surgical tissue</td>
+                                <td>≥10mg</td>
+                                <td>/</td>
+                                <td>≥500mg</td>
+                            </tr>
+                            <tr>
+                                <td>Biopsy tissue</td>
+                                <td>≥10mg</td>
+                                <td>/</td>
+                                <td>≥500mg</td>
+                            </tr>
+                            <tr>
+                                <td>FFPE tissue</td>
+                                <td>10-20 sheets, area 1cm², thickness 5-10µm</td>
+                                <td>/</td>
+                                <td>/</td>
+                            </tr>
+                             <tr>
+                                <td>Plasma</td>
+                                <td>/</td>
+                                <td>≥3ml</td>
+                                <td>≥5ml</td>
+                            </tr>
+                             <tr>
+                                <td>Whole blood</td>
+                                <td>≥2ml</td>
+                                <td>/</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>Saliva</td>
+                                <td>1-2ml</td>
+                                <td>/</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>Faeces</td>
+                                <td>/</td>
+                                <td>≥2g</td>
+                                <td>≥500mg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h4><i class="fas fa-rna"></i> Transcriptomics</h4>
+                <p>Transcriptomics, the study of all transcribed RNAs (mRNAs, non - coding RNAs, and small RNAs) in a biological organism, reveals gene expression and regulation mechanisms, reflecting a cell's specific state [19].mRNA - seq, a common technique, involves total RNA extraction, mRNA enrichment, double - stranded cDNA synthesis, end - repair, poly - A addition, adapter ligation, PCR enrichment, and library quality assessment, enabling high - throughput sequencing to uncover RNA expression dynamics and structural variations[20].miRNA - seq, focusing on 20 - to 25 - nt small RNAs, includes RNA extraction, adapter addition, reverse transcription, PCR amplification, and library quality assessment, using SE50 sequencing to analyze miRNA expression levels and evolutionary history[21]. LncRNA-seq resolves long non-coding RNA functions by removing rRNA and retaining strand information [22].circRNA - seq constructs libraries by removing ribosomal and linear RNA, employing PE150 sequencing (Note: article.txt says PE50, keeping PE150 from original HTML) to analyze circular non - coding RNA differential expression and miRNA binding sites, elucidating their functional mechanisms [23, 24]. Macrotranscriptome sequencing takes all RNA as the research object, and after constructing standard libraries, it is able to analyse the transcriptional situation and regulatory laws of the genome of a population in a specific environment. The amount of sequencing data usually reaches 5-10Gb, providing an important tool for the study of gene expression networks in ecosystems. [25].</p>
+                 <div class="table-header">
+                    <h5>Table 2: Transcriptomics sample size requirements</h5>
+                    <button class="download-btn" onclick="downloadTableAsCSV('transcriptomics-table', 'table2_transcriptomics_samples.csv')"><i class="fas fa-download"></i> Download CSV</button>
+                 </div>
+                 <div class="table-container">
+                     <table id="transcriptomics-table">
+                         <thead>
+                             <tr>
+                                 <th>Sample type</th>
+                                 <th>mRNA-seq Sample volume</th>
+                                 <th>miRNA-seq Sample volume</th>
+                                 <th>LncRNA-seq Sample volume</th>
+                                 <th>CircRNA-seq Sample volume</th>
+                                 <th>Macrotranscriptome Sample volume</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>Surgical tissue</td>
+                                 <td>≥25mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥25mg</td>
+                                 <td>≥500mg</td>
+                                 <td>≥500mg</td>
+                             </tr>
+                             <tr>
+                                 <td>Biopsy tissue</td>
+                                 <td>≥25mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥25mg</td>
+                                 <td>≥500mg</td>
+                                 <td>≥500mg</td>
+                             </tr>
+                             <tr>
+                                 <td>FFPE tissue</td>
+                                 <td>5-10 sheets, thickness 5-10μm, 25mm²</td>
+                                 <td>5-10 sheets, thickness 5-10μm, 25mm²</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Whole Blood</td>
+                                 <td>≥500μl</td>
+                                 <td>≥500μl</td>
+                                 <td>≥500μl</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Faeces</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>1-3g</td>
+                             </tr>
+                         </tbody>
+                     </table>
+                 </div>
+            </div>
+
+            <div class="sub-section">
+                <h4><i class="fas fa-atom"></i> Proteomics</h4>
+                <p>Proteomics, which uses high - throughput methods to analyze protein types, quantities, modifications, and interactions in cells or tissues, works with genomics and transcriptomics to uncover dynamic gene expression processes, crucial for understanding physiological and disease mechanisms[26].Unlabeled techniques like DIA generate secondary spectra by spectral library construction and integrate first - level signals. Combined with LC - MS/MS and tools like Spectronaut, it improves detection reliability. 4D - DIA adds ion mobility separation, enhancing scanning speed, sensitivity, and quantification accuracy[27, 28].Label free uses LC - MS/MS for large - scale protein identification by analyzing proteolytic peptides. TMT enables simultaneous relative quantification of 8 or 18 samples using isotope tags, involving protein extraction, digestion, labeling, chromatographic fractionation, and LC - MS/MS detection [29, 30].PRM, after pre - experimental optimization, targets specific peptide segments for accurate quantification. [31].Metaproteomics combines label - free quantification, chromatographic fractionation, and mass spectrometry, using Unipept and Krona software to analyze microbial community protein composition and species abundance [32].</p>
+                <p>Post - translational modification research covers glycosylation, ubiquitination, methylation, acylation, etc. Glycosylation is divided into N - and O - linked types. Technical routes include lectin - enriched N - glycopeptides (label - free combined with heavy water deglycosylation), motif antibody - enriched O - GlcNAc (4D label - free analysis), and ZIC - HILIC - enriched intact N - glycopeptides for glycan composition analysis [33-35]. The first involves a label-free approach, where N-glycopeptides are enriched using lectin affinity chromatography following enzymatic digestion. Subsequent deglycosylation with heavy water induces a mass shift, enabling detection via mass spectrometry. O-GlcNAc glycosylation analysis involves enzymatic digestion, enrichment with motif antibodies, and 4D-label-free mass spectrometry, followed by qualitative and quantitative analysis of modification sites. The second strategy involves intact N-glycopeptide analysis, where peptides are enriched using ZIC-HILIC chromatography after enzymatic digestion. This is followed by database searching and data analysis, allowing for the identification of modification sites, glycan compositions, and large-scale qualitative and quantitative analysis.Ubiquitination uses motif antibodies (K - ε - GG) to enrich peptides, with 4D label - free and mass spectrometry detecting a 114.1Da mass shift for site - specific analysis[36]. Methylation relies on motif antibody enrichment and 4D label - free analysis of molecular weight changes to precisely locate arginine/lysine methylation sites [37].Acylation uses antibody enrichment followed by TMT labeling (for acetylation) or 4D label - free detection of molecular weight shifts to analyze acylated peptides and their functional mechanisms [38].</p>
+                 <div class="table-header">
+                    <h5>Table 3: Proteomics sample size requirements</h5>
+                    <button class="download-btn" onclick="downloadTableAsCSV('proteomics-table', 'table3_proteomics_samples.csv')"><i class="fas fa-download"></i> Download CSV</button>
+                 </div>
+                 <div class="table-container">
+                     <table id="proteomics-table">
+                         <thead>
+                             <tr>
+                                 <th>Sample type</th>
+                                 <th>DIA/4D DIA<br>(not de-hyperabundance)</th>
+                                 <th>DIA/4D DIA<br>(de-abundance)</th>
+                                 <th>Label free/TMT<br>(not de-hyperabundance)</th>
+                                 <th>Label free/TMT<br>(de-abundance)</th>
+                                 <th>PRM</th>
+                                 <th>Macroproteomics</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>Surgical tissue</td>
+                                 <td>≥30mg</td>
+                                 <td>/</td>
+                                 <td>≥30mg</td>
+                                 <td>/</td>
+                                 <td>≥100mg</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Biopsy tissue</td>
+                                 <td>≥30mg</td>
+                                 <td>/</td>
+                                 <td>≥30mg</td>
+                                 <td>/</td>
+                                 <td>≥100mg</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Puncture Tissue</td>
+                                 <td>≥2 stitches, size of a grain of rice visible to the naked eye</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                             </tr>
+                              <tr>
+                                 <td>FFPE tissue</td>
+                                 <td>≥20 pieces (5-10μm thick, 50mm² size)</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Serum</td>
+                                 <td>≥20μl</td>
+                                 <td>≥100μl</td>
+                                 <td>≥20μl</td>
+                                 <td>≥100μl</td>
+                                 <td>≥50μl</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Plasma</td>
+                                 <td>≥20μl</td>
+                                 <td>≥100μl</td>
+                                 <td>≥20μl</td>
+                                 <td>≥100μl</td>
+                                 <td>≥50μl</td>
+                                 <td>/</td>
+                             </tr>
+                              <tr>
+                                 <td>Urine</td>
+                                 <td>≥500μl</td>
+                                 <td>/</td>
+                                 <td>≥500μl</td>
+                                 <td>/</td>
+                                 <td>≥500μl</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Saliva</td>
+                                 <td>≥200μl</td>
+                                 <td>/</td>
+                                 <td>≥200μl</td>
+                                 <td>/</td>
+                                 <td>≥200μl</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Faeces</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>≥2g</td>
+                             </tr>
+                         </tbody>
+                     </table>
+                 </div>
+
+                 <div class="table-header">
+                     <h5>Table 4: Modified proteomics sample size requirements</h5>
+                     <button class="download-btn" onclick="downloadTableAsCSV('proteomics-modified-table', 'table4_proteomics_modified_samples.csv')"><i class="fas fa-download"></i> Download CSV</button>
+                 </div>
+                 <div class="table-container">
+                     <table id="proteomics-modified-table">
+                         <thead>
+                             <tr>
+                                 <th>Sample type</th>
+                                 <th>Phosphorylation</th>
+                                 <th>Glycosylation</th>
+                                 <th>Ubiquitination, Acylation, Methylation</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>Surgical tissue</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥75mg</td>
+                             </tr>
+                             <tr>
+                                 <td>Biopsy tissue</td>
+                                 <td>≥50mg</td>
+                                 <td>≥250mg</td>
+                                 <td>≥75mg</td>
+                             </tr>
+                              <tr>
+                                 <td>FFPE tissue</td>
+                                 <td>≥20 tablets (5-10μm, 50mm² size)</td>
+                                 <td>—</td>
+                                 <td>≥20 tablets (5-10μm, 50mm² size)</td>
+                             </tr>
+                             <tr>
+                                 <td>Serum</td>
+                                 <td>≥20μl</td>
+                                 <td>≥20μl</td>
+                                 <td>≥50μl</td>
+                             </tr>
+                             <tr>
+                                 <td>Plasma</td>
+                                 <td>≥20μl</td>
+                                 <td>≥20μl</td>
+                                 <td>≥50μl</td>
+                             </tr>
+                             <tr>
+                                 <td>Urine</td>
+                                 <td>≥25ml</td>
+                                 <td>≥30ml</td>
+                                 <td>≥25ml</td>
+                             </tr>
+                             <tr>
+                                 <td>Saliva</td>
+                                 <td>≥200μl</td>
+                                 <td>≥500μl</td>
+                                 <td>≥200μl</td>
+                             </tr>
+                             <tr>
+                                 <td>Faeces</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                             </tr>
+                         </tbody>
+                     </table>
+                 </div>
+            </div>
+
+            <div class="sub-section">
+                <h4><i class="fas fa-share-alt"></i> Metabolomics</h4>
+                <p>Metabolomics, a burgeoning "omics" field following genomics, transcriptomics, and proteomics, serves as an extension of the latter two, offering a more direct and precise reflection of an organism's physiological state. It constitutes a crucial component of systems biology. By investigating alterations in metabolites, metabolomics elucidates the roles and impacts of proteins within metabolic pathways, thereby reflecting the outcomes of gene expression and regulation[39].</p>
+                <p>The primary technical workflow in metabolomics research begins with the separation of target compounds from the sample. Subsequently, appropriate methods are employed for metabolite extraction; for instance, global metabolomics often utilizes a combined extraction approach for hydrophilic metabolites and lipids. Prior to instrumental analysis, quality control (QC) measures are implemented to ensure the accuracy and reliability of the instrument and the detection process. Following this, gas chromatography (GC) or liquid chromatography (LC) separation techniques are used to finely separate the complex sample mixture, providing distinct sample components for subsequent mass spectrometry (MS) analysis. Mass spectrometry, with its high sensitivity and specificity, then precisely identifies and quantifies each component. The acquired data undergoes filtering to eliminate invalid or interfering data, ensuring data quality and reliability, followed by qualitative and quantitative analysis[40].</p>
+                <div class="table-header">
+                    <h5>Table 5: Metabolomics sample size requirements</h5>
+                    <button class="download-btn" onclick="downloadTableAsCSV('metabolomics-table', 'table5_metabolomics_samples.csv')"><i class="fas fa-download"></i> Download CSV</button>
+                </div>
+                <div class="table-container">
+                    <table id="metabolomics-table">
+                        <thead>
+                            <tr>
+                                <th>Sample type</th>
+                                <th>Non-targeted metabolomics</th>
+                                <th>Targeted metabolomics</th>
+                                <th>Non-targeted lipid metabolomics</th>
+                                <th>Lipid Metabolomics</th>
+                                <th>Full-Spectrum Metabolome</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Surgical tissue</td>
+                                <td>≥50mg</td>
+                                <td>≥50mg</td>
+                                <td>≥60mg</td>
+                                <td>≥60mg</td>
+                                <td>≥60mg</td>
+                            </tr>
+                            <tr>
+                                <td>Biopsy tissue</td>
+                                <td>≥50mg</td>
+                                <td>≥50mg</td>
+                                <td>≥60mg</td>
+                                <td>≥60mg</td>
+                                <td>≥60mg</td>
+                            </tr>
+                             <tr>
+                                <td>Serum</td>
+                                <td>≥100μl</td>
+                                <td>≥300μl</td>
+                                <td>≥100μl</td>
+                                <td>≥300μl</td>
+                                <td>≥100μl</td>
+                            </tr>
+                             <tr>
+                                <td>Plasma</td>
+                                <td>≥100μl</td>
+                                <td>≥300μl</td>
+                                <td>≥100μl</td>
+                                <td>≥300μl</td>
+                                <td>≥100μl</td>
+                            </tr>
+                             <tr>
+                                <td>Urine</td>
+                                <td>≥100μl</td>
+                                <td>≥1ml</td>
+                                <td>≥100μl</td>
+                                <td>≥500μl</td>
+                                <td>≥100μl</td>
+                            </tr>
+                             <tr>
+                                <td>Saliva</td>
+                                <td>≥100μl</td>
+                                <td>≥200μl</td>
+                                <td>≥100μl</td>
+                                <td>≥1ml</td>
+                                <td>≥100μl</td>
+                            </tr>
+                             <tr>
+                                <td>Faeces</td>
+                                <td>≥50mg</td>
+                                <td>≥100mg</td>
+                                <td>/</td>
+                                <td>≥200mg</td>
+                                <td>≥50mg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h4><i class="fas fa-magnet"></i> Epigenomics</h4>
+                <p>Epigenomics explores heritable genome modifications like DNA methylation, chromatin accessibility, and RNA methylation that regulate gene expression without altering the DNA sequence, revealing the dual mechanisms of genetic information storage in both sequences and modifications [41].For DNA methylation, Whole - Genome Bisulfite Sequencing (WGBS) uses bisulfite to convert unmethylated cytosines to uracil, enabling single - base methylation mapping via high - throughput sequencing. The process includes DNA extraction, fragmentation, bisulfite conversion, and library preparation[42, 43].Reduced Representation Bisulfite Sequencing (RRBS) enriches CCGG site - containing fragments via MspI digestion, covering 12% of the genome's methylation sites (over 80% of promoter regions) after bisulfite treatment, ideal for clinical CpG island methylation studies[44].Bisulfite Amplicon Sequencing (BSAS) allows targeted PCR amplification of specific genes or CpG islands, enabling absolute methylation quantification with as little as 1ng of sample [45].For chromatin accessibility and RNA methylation, ATAC - seq uses Tn5 transposase to cleave open chromatin regions, creating sequencing libraries to map nuclear chromatin accessibility, which can be combined with RNA - seq to study gene regulatory networks[46].MeRIP - seq enriches m6A - methylated RNA fragments (around 100nt) using m6A antibodies to profile m6A modification distribution across the transcriptome[47].ChIP - seq enriches DNA regions with histone modifications or transcription factor binding via chromatin immunoprecipitation, detecting genome - wide interaction sites[48, 49].</p>
+                 <div class="table-header">
+                     <h5>Table 6: Epigenomics sample size requirements</h5>
+                     <button class="download-btn" onclick="downloadTableAsCSV('epigenomics-table', 'table6_epigenomics_samples.csv')"><i class="fas fa-download"></i> Download CSV</button>
+                 </div>
+                 <div class="table-container">
+                     <table id="epigenomics-table">
+                         <thead>
+                             <tr>
+                                 <th>Sample type</th>
+                                 <th>WGBS</th>
+                                 <th>RRBS</th>
+                                 <th>BSAS</th>
+                                 <th>ATAC-seq</th>
+                                 <th>MeRIP-seq</th>
+                                 <th>ChIP-seq</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>Surgical tissue</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                             </tr>
+                             <tr>
+                                 <td>Biopsy tissue</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                                 <td>≥50mg</td>
+                             </tr>
+                             <tr>
+                                 <td>FFPE tissue</td>
+                                 <td>5-10 sheets, thickness 4-5 μm, 0.6mm³</td>
+                                 <td>≥10 pieces, thickness 5μm-10μm, area 200mm²</td>
+                                 <td>≥10 pieces, thickness 5μm-10μm, area 200mm²</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Serum</td>
+                                 <td>/</td>
+                                 <td>≥4ml</td>
+                                 <td>≥4ml</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Plasma</td>
+                                 <td>/</td>
+                                 <td>≥4ml</td>
+                                 <td>≥4ml</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                             </tr>
+                             <tr>
+                                 <td>Whole Blood</td>
+                                 <td>≥1ml</td>
+                                 <td>≥2ml</td>
+                                 <td>≥2ml</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                             </tr>
+                              <tr>
+                                 <td>Faeces</td>
+                                 <td>≥1ml</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                                 <td>/</td>
+                             </tr>
+                         </tbody>
+                     </table>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 A framework for Multi-Omics based Biobank | <i class="fas fa-envelope"></i> Contact Us: fuyang@zzu.edu.cn</p>
+    </footer>
+
+    <script>
+        function escapeCSV(cellData) {
+            let data = String(cellData).trim();
+            if (data.includes(',') || data.includes('"') || data.includes('\n')) {
+                data = data.replace(/"/g, '""');
+                data = `"${data}"`;
+            }
+            return data;
+        }
+
+        function downloadTableAsCSV(tableId, filename) {
+            const table = document.getElementById(tableId);
+            if (!table) {
+                console.error(`Table with id "${tableId}" not found.`);
+                return;
+            }
+
+            let csv = [];
+            const rows = table.querySelectorAll("tr");
+
+            for (const row of rows) {
+                const rowData = [];
+                const cells = row.querySelectorAll("th, td");
+                for (const cell of cells) {
+                    const cellText = cell.innerText.replace(/\u00A0/g, ' ').replace(/\s+/g, ' ').trim();
+                    rowData.push(escapeCSV(cellText));
+                }
+                csv.push(rowData.join(","));
+            }
+
+            const csvContent = csv.join("\n");
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+
+            const link = document.createElement("a");
+            if (link.download !== undefined) {
+                const url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", filename || "table.csv");
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+            } else {
+                navigator.msSaveBlob(blob, filename || "table.csv");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html> 

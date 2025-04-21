@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - A Framework for Multi-Omics Based Biobank</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>A framework for Multimodal Biospecimen management in Oncologic Inpatient Cohorts for Multi-Omics based Biobank</h1>
+            <p><em>Zhao Sun<sup>1#</sup>, Xuejiao Xia<sup>1#</sup>, Rui Deng<sup>1</sup>, Jiahui Li<sup>1</sup>, Guanghui Li<sup>1</sup>, Mingliang Yuan<sup>1</sup>, Sanfei Peng<sup>1</sup>, Xiang-yang Yin<sup>1</sup>, Zhiwei Zhao<sup>1</sup>, Xinhua Dong<sup>1</sup>, Qi Liu<sup>1</sup>, Zhen Yang<sup>1*</sup>, Yang Fu<sup>1*</sup></em></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="omics.html"><i class="fas fa-dna"></i> Omics Requirements</a></li>
+                <li><a href="sample_management.html"><i class="fas fa-vials"></i> Sample Management</a></li>
+                <li><a href="ethics.html"><i class="fas fa-file-contract"></i> Ethics & Security</a></li>
+                <li><a href="workflow.html"><i class="fas fa-project-diagram"></i> Biobank Workflow</a></li>
+                <li><a href="introduction.html" class="active"><i class="fas fa-book-open"></i> Introduction</a></li>
+                <li><a href="discussion.html"><i class="fas fa-comments"></i> Discussion & Outlook</a></li>
+                <li><a href="authors.html"><i class="fas fa-users"></i> Author Information</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h2><i class="fas fa-book-open"></i> Introduction</h2>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> Introduction
+            </div>
+        </div>
+
+        <section id="abstract" class="card content-section">
+            <h3><i class="fas fa-file-alt"></i> Abstract</h3>
+            <div class="abstract-content">
+                <p><strong>Background:</strong> Omics-based technologies have significantly advanced precision medicine, relying on high-quality biobanks to meet technical demands. However, universal guidance for end-to-end management of biospecimen collection during patient hospitalization is still lacking, leading to significant bias in subsequent integrated omics analyses.</p>
+                <p><strong>Aim of Review:</strong> This review aims to systematically summarize the requirements of multi-omics technologies for biological samples and propose a standardized multimodal biospecimen management framework.</p>
+                <p><strong>Key Scientific Concepts:</strong> This study proposes a framework encompassing: (1) multimodal biospecimen volume requirements for each omics type; (2) standard protocols for multimodal biospecimen collection, transport, and storage, including tissue, serum, saliva, urine, and faeces; (3) ethical compliance; and (4) quality control (QC) and data management, including metadata collection and other processes. This framework facilitates standardized multimodal biospecimen management, thereby accelerating precision oncology development based on omics technologies.</p>
+            </div>
+        </section>
+
+        <section id="introduction" class="card content-section">
+            <h3><i class="fas fa-history"></i> Introduction Background</h3>
+            <div class="intro-content">
+                <p>Biobanks, encompassing programmatic biomaterials, associated information, and legal considerations involving data security and protection[1, 2] , are cornerstones of biomedical research. Their evolution mirrors a shift from disease-specificity towards multidimensional data integration. The 1990s witnessed the emergence of biobanks, primarily disease-oriented and limited in scope[3-5]. As biological research progressed, complex disease-gene relationships became evident. The Human Genome Project (HGP), aimed at comprehensively exploring human genetic information, concluded successfully in 2003. Subsequently, biobanks primarily supporting genomic research emerged [6-8], yet they faced limitations in data dimensionality[9]. Breakthroughs in high-throughput technologies spurred the systematic integration of omics (e.g., genomics, proteomics, metabolomics), enabling comprehensive or near-comprehensive analysis of cellular components like RNA and DNA[10]. This propelled biobanks towards multi-omics data centres. Notable examples include the UK Biobank, releasing genomic and phenotypic data for 500,000 individuals[11], and The Cancer Genome Atlas (TCGA), a multi-omics cancer database[12], providing crucial resources for precision medicine.</p>
+            </div>
+            
+            <h3><i class="fas fa-lightbulb"></i> Impact of Multi-Omics Technologies</h3>
+            <div class="intro-content">
+                <p>The advent of multi-omics technologies has revolutionized biomedical research by enabling systematic exploration of biological systems. These technologies generate large-scale datasets capturing genetic, molecular, and functional dynamics, offering unprecedented insights into disease mechanisms and personalized therapies. However, their success hinges on the availability of high-quality biospecimens, highlighting the critical role of biobanks. Currently, biobanks worldwide operate largely as localized entities, often established to serve specific research objectives, resulting in a fragmented landscape. In this context, constructing multi-omics-oriented biobanks requires integrating multidimensional biomarkers and establishing a standardized framework across platforms to support the entire innovation spectrum, from basic research to clinical translation.</p>
+            </div>
+        </section>
+
+        <section class="card content-section">
+            <h3><i class="fas fa-project-diagram"></i> Project Significance and Objectives</h3>
+            <div class="intro-content">
+                <p>This project aims to fill the current gaps in biobank management, particularly regarding the standardization of sample collection and management for multi-omics research. By establishing a comprehensive framework, we expect to address the following key issues:</p>
+                <ul class="project-goals">
+                    <li><i class="fas fa-check-circle"></i> Establish specific requirement standards for different types of biological samples for multi-omics research</li>
+                    <li><i class="fas fa-check-circle"></i> Standardize the entire process of biological sample collection, processing, and storage</li>
+                    <li><i class="fas fa-check-circle"></i> Ensure ethical compliance and data security management</li>
+                    <li><i class="fas fa-check-circle"></i> Provide quality control standards and metadata collection specifications</li>
+                </ul>
+                <p>By achieving these objectives, this project will promote the standardization of multi-omics research and data comparability, accelerating the progress of precision medicine.</p>
+            </div>
+        </section>
+
+        <section class="reference-section card">
+            <h3><i class="fas fa-book"></i> References</h3>
+            <ol class="references">
+                <li>De Souza YG, Greenspan JS. Biobanking past, present and future: responsibilities and benefits. AIDS. 2013;27(3):303-312.</li>
+                <li>Vaught J, Lockhart NC. The evolution of biobanking best practices. Clin Chim Acta. 2012;413(19-20):1569-1575.</li>
+                <li>Riegman PH, Morente MM, Betsou F, et al. Biobanking for better healthcare. Mol Oncol. 2008;2(3):213-222.</li>
+                <li>Eiseman E, Haga SB. Handbook of Human Tissue Sources: A National Resource of Human Tissue Samples. RAND Corporation; 1999.</li>
+                <li>Orr MS, Goodsaid F, Amur S, Rudman A, Frueh FW. The experience with voluntary genomic data submissions at the FDA and a vision for the future of the voluntary data submission program. Clin Pharmacol Ther. 2007;81(2):294-297.</li>
+                <li>International HapMap Consortium. The International HapMap Project. Nature. 2003;426(6968):789-796.</li>
+                <li>Kaiser J. Population databases boom, from Iceland to the U.S. Science. 2002;298(5596):1158-1161.</li>
+                <li>Thorisson GA, Smith AV, Krishnan L, Stein LD. The International HapMap Project Web site. Genome Res. 2005;15(11):1592-1593.</li>
+                <li>Hasin Y, Seldin M, Lusis A. Multi-omics approaches to disease. Genome Biol. 2017;18(1):83.</li>
+                <li>Chakraborty S, Hosen MI, Ahmed M, Shekhar HU. Onco-Multi-OMICS Approach: A New Frontier in Cancer Research. Biomed Res Int. 2018;2018:9836256.</li>
+                <li>Bycroft C, Freeman C, Petkova D, et al. The UK Biobank resource with deep phenotyping and genomic data. Nature. 2018;562(7726):203-209.</li>
+                <li>Hutter C, Zenklusen JC. The Cancer Genome Atlas: Creating Lasting Value beyond Its Data. Cell. 2018;173(2):283-285.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 A framework for Multi-Omics based Biobank | <i class="fas fa-envelope"></i> Contact Us: fuyang@zzu.edu.cn</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate elements when they come into view
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html> 
