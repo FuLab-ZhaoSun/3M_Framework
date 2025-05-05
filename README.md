@@ -1,4 +1,4 @@
-# 3M Framework: Targeting for Multi-omics-based Biobank Website
+# A 3M Framework for Multi-omics Biobank Development
 
 ## Introduction
 
